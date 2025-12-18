@@ -1,36 +1,163 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎸 Chordmap
 
-## Getting Started
+**Chordmap** is a full-stack web application for guitar players and music enthusiasts that combines music learning, chord & note visualization, personalized recommendations, and playlist generation — all in one place.
 
-First, run the development server:
+The app helps users organize songs, learn guitar more effectively, discover new music, and create Spotify playlists based on their taste.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+### 📝 Song Management
+Manage your personal song library with full control over content and learning status.
 
-To learn more about Next.js, take a look at the following resources:
+- Create, edit, view, and delete **your own songs**
+- Add lyrics and chords manually
+- Mark songs as **Finished / To Finish**
+- Automatic **Playable** status if all required chords are mastered
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<img width="1651" height="503" alt="Song management" src="https://github.com/user-attachments/assets/5f1355df-bdc4-4143-b0b0-50fbb6beae72" />
+<br><br>
+<img width="1648" height="562" alt="image" src="https://github.com/user-attachments/assets/7b5de985-2b0e-4e68-893e-8d8e90cad830" />
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### ❤️ Favorites & Likes
+Save and organize tracks you love, with flexible viewing options.
+
+- Like tracks from search, charts, or recommendations
+- Store favorites locally
+- View statistics: most liked artists & recent likes
+- Switch between **grid** and **list** view
+
+<img width="1868" height="908" alt="Favorites" src="https://github.com/user-attachments/assets/e7f9857a-9d77-4bcd-8a24-61b2a4bb9a3f" />
+<br><br>
+<img width="1841" height="901" alt="image" src="https://github.com/user-attachments/assets/31cf2ce6-f4ba-43c7-89cb-770b912c12b2" />
+
+---
+
+
+### 🔍 Music Discovery & Recommendations
+Discover new music tailored to your taste.
+
+- Search tracks by name or artist
+- Get similar songs and albums based on listening preferences
+- Add recommended tracks directly to your learning list
+- Auto-fetch lyrics & chords when adding a song
+
+<img width="1700" height="838" alt="Recommendations" src="https://github.com/user-attachments/assets/a2c52f4f-6769-4245-b836-2667bdf6b2b1" />
+
+---
+
+
+### 📈 Music Charts by Country
+Explore trending music across different regions.
+
+- View trending tracks by selected country
+- Powered by **YouTube Data API**
+- Automatic fallback to **Last.fm API**
+- Play music videos directly inside the app
+
+<img width="1628" height="809" alt="Charts" src="https://github.com/user-attachments/assets/f7d869f6-f2a5-4f16-90ee-8d52606350d5" />
+
+---
+
+
+### 🎧 Spotify Playlist Generator
+Turn discovery into action with instant playlist creation.
+
+- Generate a playlist with **2–50 tracks**
+- Based on the track you search
+- Save playlists directly to your Spotify account
+- Secure OAuth authorization
+
+<img width="1566" height="833" alt="image" src="https://github.com/user-attachments/assets/4e4036eb-3a7b-4ac0-bbae-bd1dcb17ea24" />
+
+
+---
+
+
+### ▶️ YouTube Integration
+Listen without leaving the app.
+
+- Built-in YouTube player
+- Play official music videos inline
+- Controls for volume, Spotify link, and learning actions
+
+<img width="1218" height="825" alt="YouTube player" src="https://github.com/user-attachments/assets/9fc9fb16-bedb-4a9d-bba2-b0f950423e93" />
+
+---
+
+
+### 🎸 Chord Visualization
+Learn chords visually and contextually.
+
+- Full chord library with guitar diagrams
+- Hover over chords in lyrics to preview shapes
+- Filter by chord type (major, minor, barre, power)
+- Interactive **Circle of Fifths**
+- Track mastered chord categories
+
+<img width="1845" height="867" alt="Chords" src="https://github.com/user-attachments/assets/fee5af4f-b9be-4a15-93a3-c25c3ee5eca6" />
+
+---
+
+
+### 🎼 Interactive Guitar Fretboard
+Understand the guitar fretboard and music theory visually.
+
+- Display all notes on the fretboard
+- Adjust tuning (half-step up / down)
+- Highlight selected notes
+
+<img width="1448" height="668" alt="Fretboard" src="https://github.com/user-attachments/assets/55746a76-6b43-477a-aff8-0157622d63f0" />
+
+---
+
+## Tech Stack
+
+### Frontend
+- **Next.js**
+- **React**
+- **TypeScript**
+- **styled-components**
+
+### Backend
+- **Next.js API Routes**
+- **FastAPI** (charts & discography processing)
+- **Node.js**
+- **Clerk**
+
+### Database
+- **MongoDB Atlas**
+- **Prisma ORM**
+
+### External APIs
+- Spotify Web API
+- YouTube Data API v3
+- Last.fm API
+
+---
+
+## 🎯 Purpose & Use Cases
+
+Chordmap is designed for:
+- Guitar beginners and intermediate players
+- Music students & teachers
+- Users who want to discover new music intelligently
+- Songwriters organizing their ideas and drafts
+
+It can be used as:
+- A personal learning tool
+- A music discovery platform
+- A companion app for guitar practice
+- A helper tool in music schools
+
+---
+
+## 📄 License
+
+This project is for educational and non-commercial purposes.
